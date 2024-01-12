@@ -1,0 +1,233 @@
+/* Estilos para mensajes enviados (sent-message) */
+/* Estilos para la lista de amigos */
+/* Estilos para el elemento de carga de archivos */
+.file-input {
+  display: none; /* Ocultar el elemento de entrada real */
+}
+
+
+
+/* Estilos CSS para alinear elementos en el formulario */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.upload-container {
+  display: flex;
+  align-items: center;
+  gap: 2px; /* Espacio entre el botón y el nombre del archivo */
+}
+
+
+
+
+
+
+/* Estilos para la lista de amigos */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.friend-item {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  transition: border-color 0.3s ease; /* Transición de color de borde */
+}
+
+/* Estilos para el icono */
+.friend-item .MuiButtonBase-root {
+  color: #2196F3; /* Color del icono azul */
+}
+
+/* Estilos para el nombre y apellido del amigo */
+.friend-item div:nth-child(2) {
+  font-size: 16px; /* Tamaño de fuente del nombre y apellido */
+  margin-left: 8px; /* Espacio entre el icono y el nombre */
+}
+
+/* Estilos para el botón de agregar */
+.friend-item .MuiButtonBase-root:hover {
+  background-color: #2196F3; /* Color de fondo azul al pasar el mouse por encima del icono */
+  color: #fff; /* Color del texto blanco al pasar el mouse por encima del icono */
+  transition: background-color 0.3s ease;
+}
+
+/* Estilos para amigos seleccionados */
+.friend-item.selected {
+  border-color: #2196F3; /* Color de borde azul para amigos seleccionados */
+}
+
+/* Estilos CSS responsivos */
+@media (max-width: 768px) {
+  .friend-item {
+    display: block;
+  }
+
+  .friend-item.selected {
+    border-color: #2196F3; /* Color de borde azul para amigos seleccionados en pantallas pequeñas */
+  }
+}
+/* Color de borde azul para amigos seleccionados en pantallas pequeñas */
+
+.sent-message {
+  background-color: #2196F3; /* Color de fondo azul */
+  color: #fff; /* Color del texto blanco */
+  border-radius: 10px;
+  padding: 10px;
+  margin: 5px 10px 5px auto; /* Alinear al extremo derecho */
+  max-width: 70%; /* Ajustar el ancho máximo según tus preferencias */
+}
+
+/* Estilos para mensajes recibidos (received-message) */
+.received-message {
+  background-color: #E0E0E0; /* Color de fondo gris claro */
+  color: #333; /* Color del texto oscuro */
+  border-radius: 10px;
+  padding: 10px;
+  margin: 5px auto 5px 10px; /* Alinear al extremo izquierdo */
+  max-width: 70%; /* Ajustar el ancho máximo según tus preferencias */
+}
+
+/* Estilos CSS responsivos */
+@media (max-width: 768px) {
+  .sent-message,
+  .received-message {
+    max-width: 100%; /* Cambiar el ancho máximo en pantallas más pequeñas */
+  }
+}
+
+.chatBoxTop ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Estilos para mensajes enviados */
+.sent {
+  background-color: #007BFF; /* Fondo azul para mensajes enviados */
+  color: white;
+  border-radius: 0.5rem;
+  padding: 4rem 6rem;
+  margin: 0.5rem 0;
+  max-width: 70%; /* Ajusta el ancho máximo para mensajes enviados */
+  align-self: flex-end; /* Alinea a la derecha en el contenedor */
+}
+
+/* Estilos para mensajes recibidos */
+.received {
+  background-color: white; /* Fondo blanco para mensajes recibidos */
+  color: #333; /* Color de texto para mensajes recibos */
+  border-radius: 0.5rem;
+  padding: 0.5rem 2rem;
+  margin: 0.5rem 0;
+  max-width: 70%; /* Ajusta el ancho máximo para mensajes recibidos */
+  align-self: flex-start; /* Alinea a la izquierda en el contenedor */
+}
+
+/* Estilos para hacer que los mensajes sean responsive */
+@media (max-width: 768px) {
+  .sent, .received {
+    max-width: 100%; /* Cambia el ancho máximo a 100% en pantallas más pequeñas */
+  }
+}
+
+
+.messenger {
+  height: calc(100vh - 70px);
+  display: flex;
+}
+
+.chatMenu {
+  flex: 3.5;
+}
+
+.chatMenuInput {
+  width: 90%;
+  padding: 10px 0;
+  border: none;
+  border-bottom: 1px solid gray;
+}
+
+.chatBox {
+  flex: 5.5;
+}
+
+.chatBoxWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.chatBoxTop {
+  height: 100%;
+  overflow-y: scroll;
+  padding-right: 10px;
+}
+
+.chatBoxBottom {
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.chatMessageInput {
+  width: 80%;
+  height: 90px;
+  padding: 10px;
+}
+
+.chatSubmitButton {
+  width: 70px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: teal;
+  color: white;
+}
+
+.chatOnline {
+  flex: 3;
+}
+
+.chatMenuWrapper,
+.chatBoxWrapper,
+.chatOnlineWrapper {
+  padding: 10px;
+  height: 100%;
+}
+
+.noConversationText {
+  position: absolute;
+  top: 10%;
+  font-size: 50px;
+  color: rgb(224, 220, 220);
+  cursor: default;
+}
+
+@media screen and (max-width: 768px) {
+  .chatMenu {
+    flex: 1;
+  }
+
+  .chatMenuInput {
+    display: none;
+  }
+
+  .chatBox{
+    flex: 10;
+  }
+
+  .chatOnline{
+    flex: 1px;
+  }
+}
